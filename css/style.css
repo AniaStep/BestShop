@@ -1,10 +1,9 @@
-/*font-family: 'Open Sans', sans-serif;*/
-/*font-family: 'Raleway', sans-serif;*/
-
 :root {
     --color-logo-btn-main: #08A6E4;
     --color-bg-main: #FFFFFF;
     --color-bg-secondary: #F7F7F7;
+    --font-family-OS: 'Open Sans', sans-serif;
+    --font-family-R: 'Raleway', sans-serif;
 }
 
 * {
@@ -13,8 +12,10 @@
 
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-family-OS);
 }
+
+/*Header*/
 
 .header {
     width: 100vw;
@@ -23,8 +24,9 @@ body {
     opacity: 1;
 }
 
-.container {
-    width: 1352px;
+.header .container {
+    max-width: 1352px;
+    margin: 0 auto;
     background-color: var(--color-bg-main);
     display: flex;
     justify-content: space-between;
@@ -33,7 +35,7 @@ body {
 
 .logo {
     color: var(--color-logo-btn-main);
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--font-family-R);
     text-decoration: none;
     font-size: 37px;
     font-weight: 300;
@@ -43,8 +45,6 @@ body {
     opacity: 1;
 }
 
-.menu {
-}
 .menu-list {
     display: flex;
     padding-bottom: 28px;
@@ -57,7 +57,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     color: #A5A5A5;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-family-OS);
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 3.28px;
@@ -71,3 +71,164 @@ body {
     color: #000000;
     border-bottom-color: var(--color-logo-btn-main);
 }
+
+/*Main section (including Stats*/
+
+.section {
+    width: 100%;
+}
+
+.s-main {
+    text-align: center;
+    width: 100%
+}
+
+.s-main-h1-title {
+    font-family: var(--font-family-R);
+    font-weight: normal;
+    font-size: 57px;
+    color: #000000;
+    opacity: 1;
+    padding-top: 130px;
+    padding-bottom: 20px;
+}
+
+.s-main-h2-title {
+    font-family: var(--font-family-R);
+    font-weight: normal;
+    font-size: 42px;
+    color: #000000;
+    opacity: 1;
+    padding-top: 100px;
+    padding-bottom: 103px;
+}
+
+.s-main-txt {
+    font-size: 22px;
+    font-family: var(--font-family-OS);
+    font-weight: normal;
+    color: #000000;
+    opacity: 1;
+    padding-bottom: 38px;
+}
+
+.s-main-btn-txt {
+    color: var(--color-bg-main);
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: var(--font-family-OS);
+}
+
+.s-main-btn {
+    width: 440px;
+    height: 67px;
+    background-color: var(--color-logo-btn-main);
+    border-radius: 40px;
+    opacity: 1;
+    border: none;
+    box-shadow: 5px 10px 14px #07ACE629;
+}
+
+.s-main-bg {
+    background-image: url("../assets/background.png");
+    width: 100vw;
+    height: 430px;
+    background-size: cover;
+    background-position: center;
+}
+
+.stats {
+    height: 531px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 240px;
+}
+
+.stats-entries {
+    width: 116px;
+    height: 140px;
+}
+
+.stats-products {
+    width: 176px;
+    height: 140px;
+}
+
+.stats-posts {
+    width: 163px;
+    height: 140px;
+}
+
+.stats-logo {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.stats-entries-logo-el2 {
+    position: absolute;
+    height: 52px;
+    width: 44px;
+    bottom: 5px;
+    left: 58px;
+}
+
+.stats-products-logo-el2 {
+    position: absolute;
+    width: 65px;
+    height: 37px;
+    bottom: 13px;
+    left: 40px;
+}
+
+.stats-posts-logo-el2 {
+    position: absolute;
+    width: 52px;
+    height: 48px;
+    bottom: 10px;
+    left: 58px;
+}
+
+.circle-small {
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+}
+
+.stats-entries-logo-el1 {
+    background-color: #FB3B64;
+}
+
+.stats-products-logo-el1 {
+    background-color: var(--color-logo-btn-main);
+}
+
+.stats-posts-logo-el1 {
+    background-color: #55DFB4;
+}
+
+.stats-cont-h3-title {
+    font-family: var(--font-family-R);
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: 6px;
+    color: #000000;
+    opacity: 1;
+    padding-bottom: 19px;
+    padding-top: 14px;
+}
+
+.stats-cont-description {
+    font-family: var(--font-family-R);
+    font-weight: normal;
+    font-size: 20px;
+    color: #A5A5A5;
+    opacity: 1;
+    padding-bottom: 149px;
+}
+
+/*Grey section*/
