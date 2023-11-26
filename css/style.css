@@ -61,7 +61,7 @@ body {
     font-size: 11px;
     letter-spacing: 3.28px;
     opacity: 1;
-    padding-bottom: 22px;
+    padding-bottom: 25px;
     padding-top: 27px;
     border-bottom: 4px solid transparent;
 }
@@ -624,7 +624,7 @@ body {
     font-family: var(--font-family-OS);
     font-size: 11px;
     font-weight: bold;
-    color: #08A6E4;
+    color: var(--color-logo-btn-main);
     letter-spacing: 3.28px;
 }
 
@@ -638,7 +638,7 @@ body {
 
 .s-contacts-form-row-name-i:hover,
 .s-contacts-form-row-email-i:hover {
-    background-color: #F7F7F7;
+    background-color: var(--color-bg-secondary);
     opacity: 0.5;
 }
 
@@ -665,7 +665,7 @@ body {
     height: 24px;
     width: 24px;
     flex-shrink: 0;
-    background-color: #FFFFFF;
+    background-color: var(--color-bg-main);
     border: 1px solid #95989A;
     border-radius: 4px;
     cursor: pointer;
@@ -694,3 +694,38 @@ body {
     color: var(--color-bg-main);
 }
 
+/*Footer*/
+
+.s-footer {
+    height: 89px;
+    width: 100%;
+    display: flex;
+    background-color: var(--color-bg-secondary);
+    box-shadow: 0 -5px 40px #00000029;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.s-footer-logo {
+    padding-left: 137px;
+}
+
+.s-footer-h1-title {
+    font-family: var(--font-family-R);
+    font-size: 26px;
+    font-weight: 300;
+    color: var(--color-logo-btn-main);
+    padding-bottom: 6px;
+}
+
+.s-footer-copy {
+    font-family: var(--font-family-OS);
+    font-size: 11px;
+    color: #A5A5A5;
+}
+
+.s-footer-media {
+    padding-right: 136px;
+    display: flex;
+    gap: 24px;
+}
