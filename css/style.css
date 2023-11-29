@@ -79,7 +79,8 @@ body {
 
 .s-main {
     text-align: center;
-    width: 100%
+    width: 100%;
+    /*box-shadow: 0 -1px 1px 1px #00000029 inset;*/
 }
 
 .s-main-h1-title {
@@ -244,7 +245,6 @@ body {
     display: flex;
     justify-content: space-between;
     border-radius: 5px;
-    border: 1px solid #E8E9ED;
 }
 
 .s-grey-el1 {
@@ -269,6 +269,13 @@ body {
 .s-grey-el:first-child {
     margin-top: 105px;
     margin-bottom: 37px;
+}
+
+.s-grey-el:first-child,
+.s-grey-el:nth-child(2),
+.s-grey-el-last .s-grey-el-text,
+.s-grey-el-last .s-grey-el-figure {
+    border: 1px solid #E8E9ED;
 }
 
 .s-grey-el:last-child {
