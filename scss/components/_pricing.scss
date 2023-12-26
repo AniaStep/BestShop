@@ -1,0 +1,153 @@
+.s-pricing {
+    padding-bottom: 155px;
+}
+
+.s-pricing-options {
+    display: flex;
+    gap: 58px;
+    justify-content: center;
+    align-items: center;
+}
+
+.s-pricing-option {
+    width: 372px;
+    height: 461px;
+    border-radius: 18px;
+    text-align: center;
+    position: relative;
+}
+
+.s-pricing-option1 {
+    border: 1px solid #FB3B64;
+}
+
+.s-pricing-option2 {
+    width: 405px;
+    height: 500px;
+    box-shadow: 5px 10px 27px #07ACE629;
+    border: 1px solid #07ACE6;
+}
+.s-pricing-option3 {
+    border: 1px solid #55DFB4;
+}
+
+.s-pricing-h2-title {
+    font-family: $font-family-R;
+    font-size: 36px;
+    color: #000000;
+    text-align: center;
+    padding-top: 116px;
+    padding-bottom: 60px;
+}
+
+.s-pricing-h4-title {
+    font-family: $font-family-R;
+    font-weight: bold;
+    font-size: 20px;
+    color: #13253B;
+    padding-top: 34px;
+}
+
+.s-pricing-price {
+    font-family: $font-family-OS;
+    font-weight: 300;
+    font-size: 46px;
+    padding-top: 17px;
+}
+
+.s-pricing-option1 .s-pricing-price {
+    color: #FB3B64;
+}
+
+.s-pricing-option2 .s-pricing-price {
+    color: #07ACE6;
+}
+
+.s-pricing-option3 .s-pricing-price {
+    color: #55DFB4;
+}
+
+.s-pricing-price-sub {
+    font-family: $font-family-R;
+    font-weight: bold;
+    font-size: 12px;
+    color: #13253B;
+    padding-top: 5px;
+}
+
+.s-pricing-txt-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 69px;
+}
+
+.s-pricing-option2 .s-pricing-txt-box {
+    gap: 25px;
+    padding-top: 66px;
+}
+
+.s-pricing-option3 .s-pricing-txt-box {
+    padding-top: 55px;
+}
+
+.s-pricing-txt {
+    font-family: $font-family-OS;
+    font-size: 14px;
+    color: #000000;
+}
+
+.s-pricing-option-btn {
+    width: 150px;
+    height: 50px;
+    border-radius: 23px;
+    border: none;
+    position: absolute;
+    bottom: -25px;
+    left: 110px;
+}
+
+.s-pricing-option1 .s-pricing-option-btn {
+    background-color: #EB476E;
+}
+
+.s-pricing-option-btn-txt {
+    color: $color-bg-main;
+    font-family: $font-family-OS;
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.s-pricing-option2 .s-pricing-option-btn {
+    background-color: $color-logo-btn-main;
+    bottom: -25px;
+    left: 127px;
+}
+
+.s-pricing-option3 .s-pricing-option-btn {
+    background-color: #55DFB4;
+}
+
+.s-pricing-option1 .s-pricing-txt:nth-child(1)::before,
+.s-pricing-option1 .s-pricing-txt:nth-child(2)::before,
+.s-pricing-option1 .s-pricing-txt:nth-child(3)::before,
+.s-pricing-option2 .s-pricing-txt:nth-child(1)::before,
+.s-pricing-option2 .s-pricing-txt:nth-child(2)::before,
+.s-pricing-option2 .s-pricing-txt:nth-child(3)::before,
+.s-pricing-option2 .s-pricing-txt:nth-child(4)::before,
+.s-pricing-option3 .s-pricing-txt:nth-child(1)::before,
+.s-pricing-option3 .s-pricing-txt:nth-child(2)::before,
+.s-pricing-option3 .s-pricing-txt:nth-child(3)::before,
+.s-pricing-option3 .s-pricing-txt:nth-child(4)::before,
+.s-pricing-option3 .s-pricing-txt:nth-child(5)::before {
+    content: url("../assets/ckechmark-1.svg");
+    padding-right: 10px;
+}
+
+.s-pricing-option1 .s-pricing-txt:nth-child(4)::before,
+.s-pricing-option1 .s-pricing-txt:nth-child(5)::before,
+.s-pricing-option2 .s-pricing-txt:nth-child(5)::before {
+    content: url("../assets/close.svg");
+    padding-right: 10px;
+}

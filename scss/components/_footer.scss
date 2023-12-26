@@ -1,0 +1,34 @@
+.s-footer {
+    height: 89px;
+    width: 100%;
+    display: flex;
+    background-color: $color-bg-secondary;
+    box-shadow: 0 -5px 40px #00000029;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.s-footer-logo {
+    padding-left: 137px;
+}
+
+.s-footer-title {
+    font-family: $font-family-R;
+    font-size: 26px;
+    font-weight: 300;
+    color: $color-logo-btn-main;
+    padding-bottom: 6px;
+    text-decoration: none;
+}
+
+.s-footer-copy {
+    font-family: $font-family-OS;
+    font-size: 11px;
+    color: #A5A5A5;
+}
+
+.s-footer-media {
+    padding-right: 136px;
+    display: flex;
+    gap: 24px;
+}
