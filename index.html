@@ -6,21 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BestShop</title>
     <link rel="stylesheet" href="scss/reset.scss">
-    <link rel="stylesheet" href="scss/main.scss">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
+<div class="all">
 <header class="header">
-    <div class="container">
+    <div class="header-container">
         <a href="/" class="logo">BestShop</a>
         <nav class="menu">
+            <input type="checkbox" class="menu-btn" id="menu-btn">
+            <label for="menu-btn" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <ul class="menu-list">
-                <li><a href="">Why us</a></li>
-                <li><a href="">Benefits</a></li>
-                <li><a href="">Prices</a></li>
-                <li><a href="">Contact</a></li>
+                <li class="menu-list-el"><a href="">Why us</a></li>
+                <li class="menu-list-el"><a href="">Benefits</a></li>
+                <li class="menu-list-el"><a href="">Prices</a></li>
+                <li class="menu-list-el"><a href="">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -194,5 +203,6 @@
         </div>
     </div>
 </section>
+</div>
 </body>
 </html>

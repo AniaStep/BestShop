@@ -1,12 +1,11 @@
 {
-  "name": "BestShop",
+  "name": "bestshop",
   "version": "2.0.0",
   "source": "./index.html",
   "scripts": {
-    "css": "parcel",
+    "css": "sass --watch scss/main.scss css/main.css",
     "server": "browser-sync start --server --files \"!node_modules/**/*, **/*.html, **/*.css, **/*.js\"",
-    "start": "concurrently \"npm:server\" \"npm:css\"",
-    "build": "parcel build"
+    "start": "concurrently \"npm:server\" \"npm:css\""
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
@@ -14,6 +13,12 @@
   },
   "dependencies": {
     "browser-sync": "^2.29.3",
-    "concurrently": "^8.2.2"
-  }
+    "concurrently": "^8.2.2",
+    "sass": "^1.69.5"
+  },
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

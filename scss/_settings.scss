@@ -4,13 +4,19 @@ $color-bg-secondary: #F7F7F7;
 $font-family-OS: 'Open Sans', sans-serif;
 $font-family-R: 'Raleway', sans-serif;
 
-
 * {
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
+.all {
+    width: 1352px;
     font-family: $font-family-OS;
-    width: 100vw;
+}
+
+@media (max-width: 1352px) {
+    .all {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
