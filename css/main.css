@@ -134,8 +134,16 @@
   width: 100%;
 }
 
+.section-1 {
+  display: flex;
+  flex-direction: column;
+}
+
 .s-main {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -147,19 +155,12 @@
   padding-bottom: 20px;
 }
 
-.s-main-h2-title {
-  font-family: "Raleway", sans-serif;
-  font-size: 42px;
-  color: #000000;
-  padding-top: 100px;
-  padding-bottom: 103px;
-}
-
 .s-main-txt {
   font-size: 22px;
   font-family: "Open Sans", sans-serif;
   color: #000000;
   padding-bottom: 38px;
+  text-align: center;
 }
 
 .s-main-btn-txt {
@@ -179,47 +180,55 @@
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.1607843137);
 }
 
-.s-main-bg {
-  background-image: url("../assets/background.png");
+.s-main-bg-img {
   width: 100vw;
   height: 430px;
-  background-size: cover;
-  background-position: center;
 }
 
-.s-main-stats {
+.s-stats {
   height: 531px;
   box-shadow: 0 -5px 80px rgba(0, 0, 0, 0.1607843137);
+  text-align: center;
+  margin: 0;
 }
 
-.s-main-stats-container {
+.s-stats-h2-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  color: #000000;
+  padding-top: 100px;
+  padding-bottom: 103px;
+  margin: 0;
+}
+
+.s-stats-container {
   display: flex;
   justify-content: center;
   gap: 240px;
 }
 
-.s-main-stats-entries {
+.s-stats-entries {
   width: 116px;
   height: 140px;
 }
 
-.s-main-stats-products {
+.s-stats-products {
   width: 176px;
   height: 140px;
 }
 
-.s-main-stats-posts {
+.s-stats-posts {
   width: 163px;
   height: 140px;
 }
 
-.s-main-stats-logo {
+.s-stats-logo {
   display: flex;
   position: relative;
   justify-content: center;
 }
 
-.s-main-stats-entries-logo-el2 {
+.s-stats-entries-logo-el2 {
   position: absolute;
   height: 52px;
   width: 44px;
@@ -227,7 +236,7 @@
   left: 58px;
 }
 
-.s-main-stats-products-logo-el2 {
+.s-stats-products-logo-el2 {
   position: absolute;
   width: 65px;
   height: 37px;
@@ -235,7 +244,7 @@
   left: 72px;
 }
 
-.s-main-stats-posts-logo-el2 {
+.s-stats-posts-logo-el2 {
   position: absolute;
   width: 52px;
   height: 48px;
@@ -249,19 +258,19 @@
   border-radius: 50%;
 }
 
-.s-main-stats-entries-logo-el1 {
+.s-stats-entries-logo-el1 {
   background-color: #FB3B64;
 }
 
-.s-main-stats-products-logo-el1 {
+.s-stats-products-logo-el1 {
   background-color: #08A6E4;
 }
 
-.s-main-stats-posts-logo-el1 {
+.s-stats-posts-logo-el1 {
   background-color: #55DFB4;
 }
 
-.s-main-stats-cont-h3-title {
+.s-stats-cont-h3-title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 24px;
@@ -271,13 +280,84 @@
   padding-top: 14px;
 }
 
-.s-main-stats-cont-description {
+.s-stats-cont-description {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   color: #A5A5A5;
   padding-bottom: 149px;
 }
 
+@media (max-width: 1100px) {
+  .s-main-bg-img {
+    height: 350px;
+  }
+  .s-stats-container {
+    gap: 190px;
+  }
+}
+@media (max-width: 1000px) {
+  .s-stats-container {
+    gap: 100px;
+  }
+  .s-stats-h2-title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 830px) {
+  .s-main-bg-img {
+    height: 200px;
+  }
+  .s-main-h1-title {
+    padding-top: 90px;
+  }
+  .s-stats-container {
+    gap: 110px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .s-stats {
+    height: 900px;
+  }
+  .s-stats-h2-title {
+    font-size: 27px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+  .s-stats-cont-h3-title {
+    font-size: 20px;
+    letter-spacing: 4px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .s-stats-cont-description {
+    font-size: 17px;
+    padding-bottom: 60px;
+    margin: 0;
+  }
+}
+@media (max-width: 550px) {
+  .s-main-btn {
+    width: 280px;
+    border-radius: 30px;
+  }
+  .s-main-bg-img {
+    height: 150px;
+  }
+  .s-main-h1-title {
+    padding-top: 40px;
+    font-size: 37px;
+    padding-bottom: 0;
+    margin: 0;
+  }
+  .s-main-txt {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .s-main-btn-txt {
+    font-size: 20px;
+  }
+}
 .section {
   width: 100%;
   display: flex;
