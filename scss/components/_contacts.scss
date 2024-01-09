@@ -1,7 +1,7 @@
 .s-contacts {
     display: flex;
     width: 896px;
-    height: 376px;
+    height: 400px;
 }
 
 .s-contacts-info {
@@ -41,7 +41,7 @@
 }
 
 .s-contacts-email::before {
-    content: url("../assets/mail-icon.svg");
+    content: url("../../assets/mail-icon.svg");
     padding-right: 10px;
     position: relative;
     top: 9px;
@@ -49,7 +49,7 @@
 }
 
 .s-contacts-phone::before {
-    content: url("../assets/phone-icon.svg");
+    content: url("../../assets/phone-icon.svg");
     padding-right: 10px;
     position: relative;
     top: 5px;
@@ -114,7 +114,7 @@
     margin-right: 15px;
 }
 .s-contacts-form-row-checkbox input:checked + span {
-    background-image: url("../assets/checkmark.svg");
+    background-image: url("../../assets/checkmark.svg");
     background-size: cover;
     background-position: center;
 }
@@ -148,19 +148,21 @@
     .s-contacts-info {
         width: 500px;
     }
+    .s-contacts-details {
+        padding-bottom: 50px;
+    }
 }
-
 
 @media (max-width: 770px) {
     .s-contacts-details {
         flex-direction: column;
         gap: 20px;
-        padding-bottom: 50px;
     }
 
     .s-contacts-txt {
         padding-bottom: 22px;
     }
+
     .s-contacts-form-row-last {
         padding-left: 180px;
     }
@@ -169,6 +171,7 @@
     .s-contacts-info {
         width: 400px;
     }
+
     .s-contacts {
         padding-left: calc((100vw - 400px)/2);
         height: 750px;
@@ -180,13 +183,19 @@
     .s-contacts-info {
         width: 300px;
     }
+
     .s-contacts {
         padding-left: calc((100vw - 300px)/2);
     }
+
     .s-contacts-h1-title {
         font-size: 40px;
     }
+
     .s-contacts-form-row-last {
         padding-left: 80px;
+    }
+    .s-grey-el-figure.s-grey-el3 {
+        height: 300px;
     }
 }

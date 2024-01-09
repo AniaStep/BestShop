@@ -145,14 +145,14 @@
 .s-pricing-option3 .s-pricing-txt:nth-child(3)::before,
 .s-pricing-option3 .s-pricing-txt:nth-child(4)::before,
 .s-pricing-option3 .s-pricing-txt:nth-child(5)::before {
-    content: url("../assets/ckechmark-1.svg");
+    content: url("../../assets/ckechmark-1.svg");
     padding-right: 10px;
 }
 
 .s-pricing-option1 .s-pricing-txt:nth-child(4)::before,
 .s-pricing-option1 .s-pricing-txt:nth-child(5)::before,
 .s-pricing-option2 .s-pricing-txt:nth-child(5)::before {
-    content: url("../assets/close.svg");
+    content: url("../../assets/close.svg");
     padding-right: 10px;
 }
 
