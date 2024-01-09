@@ -14,6 +14,10 @@
     padding-right: 15px;
   }
 }
+.all {
+  padding: 0;
+}
+
 .header {
   width: 100vw;
   height: 70px;
@@ -1029,6 +1033,7 @@
   }
   .s-contacts {
     padding-left: calc((100vw - 400px) / 2);
+    height: 750px;
   }
 }
 @media (max-width: 500px) {
@@ -1042,10 +1047,13 @@
   .s-contacts-h1-title {
     font-size: 40px;
   }
+  .s-contacts-form-row-last {
+    padding-left: 80px;
+  }
 }
 .s-footer {
   height: 89px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   background-color: #F7F7F7;
   box-shadow: 0 -5px 40px rgba(0, 0, 0, 0.1607843137);
@@ -1076,6 +1084,16 @@
   padding-right: 136px;
   display: flex;
   gap: 24px;
+}
+
+@media (max-width: 770px) {
+  .s-footer-media {
+    padding-right: 15px;
+    gap: 10px;
+  }
+  .s-footer-logo {
+    padding-left: 15px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

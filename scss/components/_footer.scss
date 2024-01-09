@@ -1,6 +1,6 @@
 .s-footer {
     height: 89px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     background-color: $color-bg-secondary;
     box-shadow: 0 -5px 40px #00000029;
@@ -31,4 +31,15 @@
     padding-right: 136px;
     display: flex;
     gap: 24px;
+}
+
+@media (max-width: 770px) {
+    .s-footer-media {
+        padding-right: 15px;
+        gap: 10px;
+    }
+
+    .s-footer-logo {
+        padding-left: 15px;
+    }
 }
