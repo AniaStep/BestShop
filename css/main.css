@@ -999,6 +999,50 @@
   color: #FFFFFF;
 }
 
+@media (max-width: 1100px) {
+  .s-contacts {
+    flex-direction: column;
+    width: 100vw;
+    height: 651px;
+    padding-left: calc((100vw - 500px) / 2);
+  }
+  .s-contacts-form,
+  .s-contacts-info {
+    width: 500px;
+  }
+}
+@media (max-width: 770px) {
+  .s-contacts-details {
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 50px;
+  }
+  .s-contacts-txt {
+    padding-bottom: 22px;
+  }
+  .s-contacts-form-row-last {
+    padding-left: 180px;
+  }
+  .s-contacts-form,
+  .s-contacts-info {
+    width: 400px;
+  }
+  .s-contacts {
+    padding-left: calc((100vw - 400px) / 2);
+  }
+}
+@media (max-width: 500px) {
+  .s-contacts-form,
+  .s-contacts-info {
+    width: 300px;
+  }
+  .s-contacts {
+    padding-left: calc((100vw - 300px) / 2);
+  }
+  .s-contacts-h1-title {
+    font-size: 40px;
+  }
+}
 .s-footer {
   height: 89px;
   width: 100%;
