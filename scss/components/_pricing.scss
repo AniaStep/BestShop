@@ -46,6 +46,7 @@
     font-size: 20px;
     color: #13253B;
     padding-top: 34px;
+    margin: 0;
 }
 
 .s-pricing-price {
@@ -53,6 +54,7 @@
     font-weight: 300;
     font-size: 46px;
     padding-top: 17px;
+    margin: 0;
 }
 
 .s-pricing-option1 .s-pricing-price {
@@ -73,6 +75,7 @@
     font-size: 12px;
     color: #13253B;
     padding-top: 5px;
+    margin: 0;
 }
 
 .s-pricing-txt-box {
@@ -95,6 +98,7 @@
     font-family: $font-family-OS;
     font-size: 14px;
     color: #000000;
+    margin: 0;
 }
 
 .s-pricing-option-btn {
@@ -150,4 +154,64 @@
 .s-pricing-option2 .s-pricing-txt:nth-child(5)::before {
     content: url("../assets/close.svg");
     padding-right: 10px;
+}
+
+@media (max-width: 1100px) {
+    * {
+        margin: 0;
+    }
+    .s-pricing-options {
+        flex-direction: column;
+    }
+    .s-pricing-txt-box {
+        gap: 20px;
+    }
+
+    .s-pricing-option2 .s-pricing-txt-box {
+        gap: 20px;
+
+    }
+}
+
+@media (max-width: 660px) {
+    * {
+        margin: 0;
+    }
+
+    .s-pricing-option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 293px;
+        height: 251px;
+    }
+
+    .s-pricing-option2 {
+        width: 339px;
+        height: 277px;
+    }
+    .s-pricing-option .s-pricing-txt-box {
+        padding-top: 0;
+        padding-right: 41px;
+    }
+
+    .s-pricing-option1 .s-pricing-txt-box,
+    .s-pricing-option3 .s-pricing-txt-box {
+        padding-right: 11px;
+    }
+
+    .s-pricing-offer {
+        padding-left: 28px;
+    }
+    .s-pricing-h4-title {
+        padding-top: 0;
+    }
+
+    .s-pricing-option2 .s-pricing-option-btn {
+        left: 93px;
+    }
+    .s-pricing-option1 .s-pricing-option-btn,
+    .s-pricing-option3 .s-pricing-option-btn {
+        left: 70px;
+    }
 }
