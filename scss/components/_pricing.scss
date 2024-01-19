@@ -31,16 +31,16 @@
     border: 1px solid #55DFB4;
 }
 
-.s-pricing-h2-title {
+.s-pricing-title {
     font-family: $font-family-R;
     font-size: 36px;
     color: #000000;
     text-align: center;
-    padding-top: 116px;
+    padding-top: 100px;
     padding-bottom: 60px;
 }
 
-.s-pricing-h4-title {
+.s-pricing-type {
     font-family: $font-family-R;
     font-weight: bold;
     font-size: 20px;
@@ -101,7 +101,10 @@
     margin: 0;
 }
 
-.s-pricing-option-btn {
+.s-pricing-option-begin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 150px;
     height: 50px;
     border-radius: 23px;
@@ -111,11 +114,11 @@
     left: 110px;
 }
 
-.s-pricing-option1 .s-pricing-option-btn {
+.s-pricing-option1 .s-pricing-option-begin {
     background-color: #EB476E;
 }
 
-.s-pricing-option-btn-txt {
+.s-pricing-option-link {
     color: $color-bg-main;
     font-family: $font-family-OS;
     font-weight: bold;
@@ -123,28 +126,16 @@
     text-decoration: none;
 }
 
-.s-pricing-option2 .s-pricing-option-btn {
+.s-pricing-option2 .s-pricing-option-begin {
     background-color: $color-logo-btn-main;
     bottom: -25px;
     left: 127px;
 }
 
-.s-pricing-option3 .s-pricing-option-btn {
+.s-pricing-option3 .s-pricing-option-begin {
     background-color: #55DFB4;
 }
-
-.s-pricing-option1 .s-pricing-txt:nth-child(1)::before,
-.s-pricing-option1 .s-pricing-txt:nth-child(2)::before,
-.s-pricing-option1 .s-pricing-txt:nth-child(3)::before,
-.s-pricing-option2 .s-pricing-txt:nth-child(1)::before,
-.s-pricing-option2 .s-pricing-txt:nth-child(2)::before,
-.s-pricing-option2 .s-pricing-txt:nth-child(3)::before,
-.s-pricing-option2 .s-pricing-txt:nth-child(4)::before,
-.s-pricing-option3 .s-pricing-txt:nth-child(1)::before,
-.s-pricing-option3 .s-pricing-txt:nth-child(2)::before,
-.s-pricing-option3 .s-pricing-txt:nth-child(3)::before,
-.s-pricing-option3 .s-pricing-txt:nth-child(4)::before,
-.s-pricing-option3 .s-pricing-txt:nth-child(5)::before {
+.s-pricing-option .s-pricing-txt::before {
     content: url("../../assets/ckechmark-1.svg");
     padding-right: 10px;
 }
@@ -203,15 +194,15 @@
     .s-pricing-offer {
         padding-left: 28px;
     }
-    .s-pricing-h4-title {
-        padding-top: 0;
+    .s-pricing-title {
+        padding-top: 50px;
     }
 
-    .s-pricing-option2 .s-pricing-option-btn {
+    .s-pricing-option2 .s-pricing-option-begin {
         left: 93px;
     }
-    .s-pricing-option1 .s-pricing-option-btn,
-    .s-pricing-option3 .s-pricing-option-btn {
+    .s-pricing-option1 .s-pricing-option-begin,
+    .s-pricing-option3 .s-pricing-option-begin {
         left: 70px;
     }
 }

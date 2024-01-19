@@ -3,7 +3,7 @@
 }
 
 .header {
-    width: 100vw;
+    width: 100%;
     height: 70px;
     box-shadow: 0 3px 6px 0 #00000029;
 
@@ -32,10 +32,6 @@
 
     &-el {
         padding: 0 26px;
-
-        &:last-child {
-            padding-right: 136px;
-        }
     }
 
     & a {

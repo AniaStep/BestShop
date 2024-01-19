@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+.all {
+    max-width: 1352px;
+    margin: 0 auto;
+    font-family: $font-family-OS;
+}
+
+@media (max-width: 1352px) {
+    .all {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

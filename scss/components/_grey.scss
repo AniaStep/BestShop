@@ -75,19 +75,19 @@
     padding-left: 60px;
 }
 
-.s-grey-el-text.s-grey-el1 .s-grey-h2-title {
+.s-grey-el-text.s-grey-el1 .s-grey-title {
     width: 237px;
 }
 
-.s-grey-el-text.s-grey-el2 .s-grey-h2-title {
+.s-grey-el-text.s-grey-el2 .s-grey-title {
     width: 246px;
 }
 
-.s-grey-el-last .s-grey-el-text.s-grey-el1 .s-grey-h2-title {
+.s-grey-el-last .s-grey-el-text.s-grey-el1 .s-grey-title {
     width: 348px;
 }
 
-.s-grey-h2-title {
+.s-grey-title {
     font-family: $font-family-R;
     font-size: 34px;
     padding-bottom: 30px;
@@ -294,25 +294,22 @@
         justify-content: center;
     }
 
-    .s-grey-el-text.s-grey-el2 .s-grey-h2-title {
+    .s-grey-el-text.s-grey-el2 .s-grey-title {
         margin-top: 0;
     }
 
-    .s-grey-el-text.s-grey-el1 .s-grey-h2-title,
-    .s-grey-el-text.s-grey-el2 .s-grey-h2-title,
-    .s-grey-el-last .s-grey-el-text.s-grey-el1 .s-grey-h2-title {
+    .s-grey-el-text.s-grey-el1 .s-grey-title,
+    .s-grey-el-text.s-grey-el2 .s-grey-title,
+    .s-grey-el-last .s-grey-el-text.s-grey-el1 .s-grey-title {
         width: 250px;
-        padding-bottom: 10px;
-    }
-
-    .s-grey-el-last .s-grey-el-text.s-grey-el1 .s-grey-h2-title {
-        padding-top: 15px;
+        padding-bottom: 20px;
+        padding-top: 0;
     }
 
     .s-grey-el-last .s-grey-description,
     .s-grey-el:first-child .s-grey-description,
     .s-grey-el:nth-child(2) .s-grey-description {
-        width: 300px;
+        width: 290px;
     }
 
     .s-grey .s-grey-el,

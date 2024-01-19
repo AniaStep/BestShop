@@ -14,7 +14,7 @@
     width: 100%;
 }
 
-.s-main-h1-title {
+.s-main-title {
     font-family: $font-family-R;
     font-size: 57px;
     color: #000000;
@@ -62,7 +62,7 @@
     margin: 0;
 }
 
-.s-stats-h2-title {
+.s-stats-title {
     font-family: $font-family-R;
     font-size: 42px;
     color: #000000;
@@ -140,7 +140,7 @@
     background-color: #55DFB4;
 }
 
-.s-stats-cont-h3-title {
+.s-stats-cont-title {
     font-family: $font-family-R;
     font-weight: 800;
     font-size: 24px;
@@ -171,7 +171,7 @@
     .s-stats-container {
         gap: 100px;
     }
-    .s-stats-h2-title {
+    .s-stats-title {
         font-size: 32px;
     }
     .s-main-bg {
@@ -188,7 +188,7 @@
         height: 250px;
         background-size: auto 250px;
     }
-    .s-main-h1-title {
+    .s-main-title {
         padding-top: 90px;
     }
     .s-stats-container {
@@ -199,12 +199,12 @@
     .s-stats {
         height: 800px;
     }
-    .s-stats-h2-title {
+    .s-stats-title {
         font-size: 27px;
         padding-bottom: 60px;
         padding-top: 60px;
     }
-    .s-stats-cont-h3-title {
+    .s-stats-cont-title {
         font-size: 20px;
         letter-spacing: 4px;
         padding-bottom: 10px;
@@ -223,7 +223,7 @@
         border-radius: 30px;
     }
 
-    .s-main-h1-title {
+    .s-main-title {
         padding-top: 70px;
         font-size: 37px;
         padding-bottom: 0;

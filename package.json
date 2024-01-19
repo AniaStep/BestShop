@@ -7,11 +7,7 @@
     "server": "browser-sync start --server --files \"!node_modules/**/*, **/*.html, **/*.css, **/*.js\"",
     "start": "concurrently \"npm:server\" \"npm:css\""
   },
-  "devDependencies": {
-    "@parcel/transformer-sass": "^2.6.0",
-    "parcel": "^2.6.0"
-  },
-  "dependencies": {
+    "dependencies": {
     "browser-sync": "^2.29.3",
     "concurrently": "^8.2.2",
     "sass": "^1.69.5"
