@@ -1228,6 +1228,29 @@ textarea {
     left: 70px;
   }
 }
+.calc-columns {
+  display: flex;
+}
+
+.calc-input,
+.calc-select {
+  width: 440px;
+  height: 40px;
+  background: #FFFFFF;
+  box-shadow: 0 3px 6px rgba(8, 166, 228, 0.1607843137);
+  border: 1px solid #08A6E4;
+  border-radius: 6px;
+}
+
+.calc-summary .list-item {
+  width: 385px;
+  height: 31px;
+  background: #55DFB4;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 6px;
+  color: #FFFFFF;
+}
+
 .s-contacts {
   display: flex;
   width: 896px;

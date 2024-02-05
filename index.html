@@ -164,7 +164,75 @@
         </div>
     </div>
 </section>
-<section class="section section-4">
+    <section class="calc">
+        <h2>Calculate how much you’ll pay</h2>
+
+        <div class="calc-columns">
+            <form class="calc-form">
+                <div class="calc-input">
+                    <input type="number" class="form-input" id="products" min="1" step="1" placeholder="Products quantity"/>
+                </div>
+                <div class="calc-input">
+                    <input type="number" class="form-input" id="orders" min="1" step="1" placeholder="Estimated orders in month"/>
+                </div>
+                <div class="calc-select" id="package" data-value="">
+                    <div class="select-input">
+                        Choose package
+                    </div>
+
+                    <ul class="select-dropdown">
+                        <li data-value="basic">Basic</li>
+                        <li data-value="professional">Professional</li>
+                        <li data-value="premium">Premium</li>
+                    </ul>
+                </div>
+                <label class="form-checkbox">
+                    <input type="checkbox" id="accounting"/>
+                    <span class="checkbox"></span>
+                    <p class="consent-text">Accounting</p>
+                </label>
+                <label class="form-checkbox">
+                    <input type="checkbox" id="terminal"/>
+                    <span class="checkbox"></span>
+                    <p class="consent-text">Rental of a payment terminal</p>
+                </label>
+            </form>
+
+            <div class="calc-summary">
+                <ul>
+                    <li class="list-item" data-id="products">
+                        <span class="item-type">Products</span>
+                        <span class="item-calc">20 * $0.5</span>
+                        <span class="item-price">$10</span>
+                    </li>
+                    <li class="list-item" data-id="orders">
+                        <span class="item-type">Orders</span>
+                        <span class="item-calc">20 * $0.5</span>
+                        <span class="item-price">$10</span>
+                    </li>
+                    <li class="list-item" data-id="package">
+                        <span class="item-type">Package</span>
+                        <span class="item-calc">Premium</span>
+                        <span class="item-price">$10</span>
+                    </li>
+                    <li class="list-item" data-id="accounting">
+                        <span class="item-type">Accounting</span>
+                        <span class="item-price">$10</span>
+                    </li>
+                    <li class="list-item" data-id="terminal">
+                        <span class="item-type">Terminal</span>
+                        <span class="item-price">$10</span>
+                    </li>
+                </ul>
+                <div class="summary-total" id="total-price">
+                    <span>Total</span>
+                    <span class="total-price">$700</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-4">
     <div class="s-contacts">
         <div class="s-contacts-info">
             <h1 class="s-contacts-title">Any questions?</h1>
@@ -192,6 +260,7 @@
             </div>
             <div class="s-contacts-form-row-last">
                 <button class="s-contacts-form-row-button">Send</button>
+            </div>
         </div>
     </div>
 </section>
