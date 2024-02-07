@@ -1,5 +1,6 @@
 .calc-columns {
   display: flex;
+  gap: 30px;
 }
 
 .calc-input,
@@ -10,6 +11,8 @@
   box-shadow: 0 3px 6px $color-calc-input-shadow;
   border: 1px solid $color-logo-btn-main;
   border-radius: 6px;
+
+
 }
 
 .calc-summary .list-item {
@@ -19,4 +22,55 @@
   box-shadow: 0 3px 6px $color-calc-summary-shadow;
   border-radius: 6px;
   color: $color-bg-main;
+}
+
+.form-input {
+  border-color: transparent;
+  width: 435px;
+  padding: 5px;
+
+}
+
+.calc {
+  height: 638px;
+  width: 100%;
+  background-color: $color-bg-secondary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.calc h2 {
+  text-align: center;
+  font-size: 36px;
+  font-family: $font-family-R;
+  padding-top: 87px;
+
+}
+.calc-form {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.calc-input {
+  display: flex;
+  justify-content: center;
+}
+
+.calc-summary ul {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.calc-summary {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.select-dropdown {
+  display: none;
 }
