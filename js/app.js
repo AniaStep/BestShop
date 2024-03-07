@@ -41,8 +41,9 @@ accountingTotal.textContent = 0;
 terminalTotal.textContent = 0;
 accountingSummary.style.display = "none";
 terminalSummary.style.display = "none";
+total.textContent = "$0"
 
-let clickCount = 0;
+    let clickCount = 0;
 let packagesArray = [0];
 let accountingArray = [0];
 let terminalArray = [0];
@@ -140,6 +141,6 @@ function updateAddonPrice3 (event) {
 
 function updateTotalPrice (event) {
 
-total.textContent = productsValue.value * 0.5 + ordersValue.value * 0.5 + packagesArray[0] + accountingArray[0] + terminalArray[0];
+total.textContent = "$" + (productsValue.value * 0.5 + ordersValue.value * 0.5 + packagesArray[0] + accountingArray[0] + terminalArray[0]);
 
 }
