@@ -1,5 +1,5 @@
 .calc {
-  height: 638px;
+  height: 529px;
   width: 100%;
   background-color: $color-bg-secondary;
   display: flex;
@@ -30,6 +30,7 @@
 
 .form-input {
   border-color: transparent;
+  background-color: transparent;
   width: 435px;
   padding: 5px;
   font-family: "Open Sans", sans-serif;
@@ -109,7 +110,9 @@
   gap: 15px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 450px;
+  height: 300px;
   align-items: flex-end;
 
   & ul {
