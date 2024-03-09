@@ -1271,9 +1271,9 @@ textarea {
   color: #A5A5A5;
 }
 
-.calc-input {
+.calc-input,
+.calc-select {
   display: flex;
-  justify-content: center;
   width: 440px;
   height: 40px;
   background: #FFFFFF;
@@ -1282,17 +1282,19 @@ textarea {
   border-radius: 6px;
 }
 
+.calc-input:hover,
+.calc-select:hover {
+  border: 2px solid #08A6E4;
+}
+
+.calc-input {
+  justify-content: center;
+}
+
 .calc-select {
-  display: flex;
   align-items: center;
   padding: 5px;
   position: relative;
-  width: 440px;
-  height: 40px;
-  background: #FFFFFF;
-  box-shadow: 0 3px 6px rgba(8, 166, 228, 0.1607843137);
-  border: 1px solid #08A6E4;
-  border-radius: 6px;
 }
 
 .arrows {

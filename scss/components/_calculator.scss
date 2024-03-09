@@ -44,9 +44,9 @@
   color: $color-calc-input-font;
 }
 
-.calc-input {
+.calc-input,
+.calc-select {
   display: flex;
-  justify-content: center;
   width: 440px;
   height: 40px;
   background: $color-bg-main;
@@ -55,17 +55,19 @@
   border-radius: 6px;
 }
 
+.calc-input:hover,
+.calc-select:hover {
+  border: 2px solid $color-logo-btn-main;
+}
+
+.calc-input {
+  justify-content: center;
+}
+
 .calc-select {
-  display: flex;
   align-items: center;
   padding: 5px;
   position: relative;
-  width: 440px;
-  height: 40px;
-  background: $color-bg-main;
-  box-shadow: 0 3px 6px $color-calc-input-shadow;
-  border: 1px solid $color-logo-btn-main;
-  border-radius: 6px;
 }
 
 .arrows {
