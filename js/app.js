@@ -1,36 +1,33 @@
+// Calculator logic
+
 const arrows = document.querySelector(".arrows");
 const arrowDown = document.querySelector(".arrow-down");
 const dropDown = document.querySelector(".select-dropdown");
-
 const calcInput = Array.from(document.querySelectorAll(".calc-input"));
 const calcForm = document.querySelector(".calc-form");
-
-const productsSummary = document.querySelector(".list-item");
-let productsPrice = document.querySelector(".item-calc");
-let productsValue = document.getElementById("products");
-let productsTotal = productsPrice.nextElementSibling;
-
-const ordersSummary = productsSummary.nextElementSibling;
-let ordersTotal = productsPrice.parentElement.nextElementSibling.lastElementChild;
-let ordersValue = document.getElementById("orders");
-let ordersPrice = ordersTotal.previousElementSibling;
-
-const packageSummary = ordersSummary.nextElementSibling;
-let packagesTotal = packageSummary.lastElementChild;
-let packagesName = packagesTotal.previousElementSibling;
-const packages = Array.from(document.querySelectorAll(".select-dropdown li"));
-
-const accountingSummary = packageSummary.nextElementSibling;
-let accountingTotal = accountingSummary.lastElementChild;
-const accountingCheckbox = document.getElementById("accounting");
-
-const terminalSummary = accountingSummary.nextElementSibling;
-let terminalTotal = terminalSummary.lastElementChild;
-const terminalCheckbox = document.getElementById("terminal");
-
-const checkboxes = Array.from(document.querySelectorAll(".form-checkbox"));
 const total = document.querySelector(".total-price");
 
+const productsSummary = document.querySelector(".list-item");
+const ordersSummary = productsSummary.nextElementSibling;
+const packageSummary = ordersSummary.nextElementSibling;
+const accountingSummary = packageSummary.nextElementSibling;
+const terminalSummary = accountingSummary.nextElementSibling;
+
+const productsPrice = document.querySelector(".item-calc");
+const productsValue = document.getElementById("products");
+const productsTotal = productsPrice.nextElementSibling;
+const ordersTotal = productsPrice.parentElement.nextElementSibling.lastElementChild;
+const ordersValue = document.getElementById("orders");
+const ordersPrice = ordersTotal.previousElementSibling;
+const packagesTotal = packageSummary.lastElementChild;
+const packagesName = packagesTotal.previousElementSibling;
+const accountingTotal = accountingSummary.lastElementChild;
+const terminalTotal = terminalSummary.lastElementChild;
+
+let clickCount = 0;
+let packagesArray = [0];
+let accountingArray = [0];
+let terminalArray = [0];
 
 arrowDown.style.zIndex = 3;
 dropDown.style.display = "none";
@@ -41,48 +38,35 @@ accountingTotal.textContent = 0;
 terminalTotal.textContent = 0;
 accountingSummary.style.display = "none";
 terminalSummary.style.display = "none";
-total.textContent = "$0"
+total.textContent = "$0";
 
-    let clickCount = 0;
-let packagesArray = [0];
-let accountingArray = [0];
-let terminalArray = [0];
+const packages = Array.from(document.querySelectorAll(".select-dropdown li"));
+packages.forEach(element => element.addEventListener("click", updateAddonPrice2));
 
 arrows.addEventListener("click", handleSelectOptions);
-calcInput.forEach(function(element) {
-    element.addEventListener("change", updateAddonPrice)
-})
-
-packages.forEach(function(element) {
-    element.addEventListener("click", updateAddonPrice2)
-})
-checkboxes.forEach(function(element) {
-    element.addEventListener("change", updateAddonPrice3)
-})
-
+calcInput.forEach(element => element.addEventListener("change", updateAddonPrice));
 calcForm.addEventListener("change", updateTotalPrice);
 calcForm.addEventListener("click", updateTotalPrice);
 
+const accountingCheckbox = document.getElementById("accounting");
+const terminalCheckbox = document.getElementById("terminal");
+const checkboxes = [accountingCheckbox, terminalCheckbox];
 
+checkboxes.forEach(element => element.addEventListener("change", updateAddonPrice3));
 
-function handleSelectOptions (event) {
+function handleSelectOptions(event) {
     event.preventDefault();
     clickCount += 1;
     if (clickCount % 2 === 0) {
         arrowDown.style.zIndex = 3;
         dropDown.style.display = "none";
-
-    }
-    else {
+    } else {
         arrowDown.style.zIndex = 0;
         dropDown.style.display = "flex";
     }
-
 }
 
-function updateAddonPrice (event) {
-
-
+function updateAddonPrice(event) {
     if (productsValue.value > 0) {
         productsPrice.textContent = productsValue.value + " * $0.5";
         productsTotal.textContent = "$" + (productsValue.value * 0.5);
@@ -95,52 +79,47 @@ function updateAddonPrice (event) {
     }
 }
 
-function updateAddonPrice2 (event) {
-    if (this.dataset.value === "basic") {
-        packagesName.textContent = "Basic";
-        packagesTotal.textContent = "$20";
-        packagesArray.splice(0,1,20);
-    }
-    if (this.dataset.value === "professional") {
-        packagesName.textContent = "Professional";
-        packagesTotal.textContent = "$40";
-        packagesArray.splice(0,1,40);
-
-    }
-    if (this.dataset.value === "premium") {
-        packagesName.textContent = "Premium";
-        packagesTotal.textContent = "$65";
-        packagesArray.splice(0,1,65);
-    }
+function updateAddonPrice2(event) {
+    const { value } = this.dataset;
+    const priceMap = {
+        basic: { name: "Basic", price: 20 },
+        professional: { name: "Professional", price: 40 },
+        premium: { name: "Premium", price: 65 }
+    };
+    const { name, price } = priceMap[value];
+    packagesName.textContent = name;
+    packagesTotal.textContent = "$" + price;
+    packagesArray.splice(0, 1, price);
     packageSummary.style.display = "flex";
 
+    packages.forEach(element => element.classList.remove('selected'));
+    this.classList.add('selected');
 }
 
-function updateAddonPrice3 (event) {
-    if (accountingCheckbox.checked) {
-        accountingTotal.textContent = "$10";
-        accountingSummary.style.display = "flex";
-        accountingArray.splice(0,1,10);
+function updateAddonPrice3(event) {
+    const checkboxMap = {
+        accounting: { element: accountingCheckbox, total: accountingTotal, array: accountingArray },
+        terminal: { element: terminalCheckbox, total: terminalTotal, array: terminalArray }
+    };
+    const { element, total, array } = checkboxMap[event.target.id];
+    if (element.checked) {
+        total.textContent = "$10";
+        array.splice(0, 1, 10);
+    } else {
+        total.textContent = "0";
+        array.splice(0, 1, 0);
     }
-    if (terminalCheckbox.checked) {
-        terminalTotal.textContent = "$10";
-        terminalSummary.style.display = "flex";
-        terminalArray.splice(0,1,10);
-    }
-    if (!accountingCheckbox.checked) {
-        accountingTotal.textContent = "0";
-        accountingSummary.style.display = "none";
-        accountingArray.splice(0,1,0);
-    }
-    if (!terminalCheckbox.checked) {
-        terminalTotal.textContent = "0";
-        terminalSummary.style.display = "none";
-        terminalArray.splice(0,1,0);
-    }
+    const summary = event.target.id === "accounting" ? accountingSummary : terminalSummary;
+    summary.style.display = element.checked ? "flex" : "none";
 }
 
-function updateTotalPrice (event) {
-
-total.textContent = "$" + (productsValue.value * 0.5 + ordersValue.value * 0.5 + packagesArray[0] + accountingArray[0] + terminalArray[0]);
-
+function updateTotalPrice(event) {
+    const totalPrice = (
+        (productsValue.value * 0.5) +
+        (ordersValue.value * 0.5) +
+        packagesArray[0] +
+        accountingArray[0] +
+        terminalArray[0]
+    );
+    total.textContent = "$" + totalPrice.toFixed(2);
 }
