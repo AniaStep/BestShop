@@ -39,8 +39,3 @@ Check out the live demo of the project [here](#).
 ![Benefits](./demo/benefits.png)
 ![Pricing](./demo/pricing.png)
 ![Calculator](./demo/calculator.png)
-
-
-## Contact
-
-For any inquiries or feedback, please contact me at [poczta@annastepien.pl](mailto:poczta@annastepien.pl).
