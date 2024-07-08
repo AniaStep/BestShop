@@ -1,18 +1,18 @@
 .calc {
-  height: 529px;
+  height: auto;
   width: 100%;
   background-color: $color-bg-secondary;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  padding-bottom: 40px;
 
   & h2 {
     text-align: center;
     font-size: 36px;
     font-family: $font-family-R;
     padding-top: 87px;
-
   }
 }
 
@@ -92,7 +92,7 @@
   position: absolute;
   border: 1px solid $color-logo-btn-main;
   z-index: 5;
-  top: 54px;
+  top: 50px;
   left: -1px;
   height: 105px;
   width: 440px;
@@ -126,9 +126,9 @@
   gap: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 450px;
-  height: 300px;
+  height: auto;
   align-items: flex-end;
 
   & ul {
@@ -186,10 +186,6 @@
 
 
 @media (max-width: 1100px) {
-
-  .calc {
-    height: 830px;
-  }
 
   .calc-columns {
    flex-direction: column;

@@ -34,8 +34,8 @@ dropDown.style.display = "none";
 productsSummary.style.display = "none";
 ordersSummary.style.display = "none";
 packageSummary.style.display = "none";
-accountingTotal.textContent = 0;
-terminalTotal.textContent = 0;
+accountingTotal.textContent = "$0";
+terminalTotal.textContent = "$0";
 accountingSummary.style.display = "none";
 terminalSummary.style.display = "none";
 total.textContent = "$0";
@@ -67,20 +67,33 @@ function handleSelectOptions(event) {
 }
 
 function updateAddonPrice(event) {
-    if (productsValue.value > 0) {
-        productsPrice.textContent = productsValue.value + " * $0.5";
-        productsTotal.textContent = "$" + (productsValue.value * 0.5);
+    const productValue = parseFloat(productsValue.value) || 0;
+    const orderValue = parseFloat(ordersValue.value) || 0;
+
+    if (productValue > 0) {
+        productsPrice.textContent = `${productValue} * $0.5`;
+        productsTotal.textContent = `$${(productValue * 0.5).toFixed(2)}`;
         productsSummary.style.display = "flex";
+    } else {
+        productsSummary.style.display = "none";
+        productsPrice.textContent = "";
+        productsTotal.textContent = "";
     }
-    if (ordersValue.value > 0) {
-        ordersPrice.textContent = ordersValue.value + " * $0.5";
-        ordersTotal.textContent = "$" + (ordersValue.value * 0.5);
+
+    if (orderValue > 0) {
+        ordersPrice.textContent = `${orderValue} * $0.5`;
+        ordersTotal.textContent = `$${(orderValue * 0.5).toFixed(2)}`;
         ordersSummary.style.display = "flex";
+    } else {
+        ordersSummary.style.display = "none";
+        ordersPrice.textContent = "";
+        ordersTotal.textContent = "";
     }
+    updateTotalPrice();
 }
 
 function updateAddonPrice2(event) {
-    const { value } = this.dataset;
+    const { value } = event.currentTarget.dataset;
     const priceMap = {
         basic: { name: "Basic", price: 20 },
         professional: { name: "Professional", price: 40 },
@@ -88,12 +101,13 @@ function updateAddonPrice2(event) {
     };
     const { name, price } = priceMap[value];
     packagesName.textContent = name;
-    packagesTotal.textContent = "$" + price;
-    packagesArray.splice(0, 1, price);
+    packagesTotal.textContent = `$${price}`;
+    packagesArray[0] = price;
     packageSummary.style.display = "flex";
 
     packages.forEach(element => element.classList.remove('selected'));
-    this.classList.add('selected');
+    event.currentTarget.classList.add('selected');
+    updateTotalPrice();
 }
 
 function updateAddonPrice3(event) {
@@ -104,22 +118,19 @@ function updateAddonPrice3(event) {
     const { element, total, array } = checkboxMap[event.target.id];
     if (element.checked) {
         total.textContent = "$10";
-        array.splice(0, 1, 10);
+        array[0] = 10;
     } else {
-        total.textContent = "0";
-        array.splice(0, 1, 0);
+        total.textContent = "$0";
+        array[0] = 0;
     }
     const summary = event.target.id === "accounting" ? accountingSummary : terminalSummary;
     summary.style.display = element.checked ? "flex" : "none";
+    updateTotalPrice();
 }
 
-function updateTotalPrice(event) {
-    const totalPrice = (
-        (productsValue.value * 0.5) +
-        (ordersValue.value * 0.5) +
-        packagesArray[0] +
-        accountingArray[0] +
-        terminalArray[0]
-    );
-    total.textContent = "$" + totalPrice.toFixed(2);
+function updateTotalPrice() {
+    const productTotal = parseFloat(productsValue.value) * 0.5 || 0;
+    const orderTotal = parseFloat(ordersValue.value) * 0.5 || 0;
+    const totalPrice = productTotal + orderTotal + packagesArray[0] + accountingArray[0] + terminalArray[0];
+    total.textContent = `$${totalPrice.toFixed(2)}`;
 }
