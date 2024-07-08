@@ -969,8 +969,7 @@ textarea {
     margin-bottom: 70px;
   }
   .s-grey-el-figure-img1,
-  .s-grey-el-figure-img2,
-  .s-grey-el-figure-img3 {
+  .s-grey-el-figure-img2 {
     height: 50%;
     width: auto;
   }
@@ -1033,10 +1032,6 @@ textarea {
   .s-grey-el-figure-img2 {
     left: 60px;
     bottom: 30px;
-  }
-  .s-grey-el-figure-img3 {
-    width: 60%;
-    height: auto;
   }
 }
 .s-pricing {
@@ -1232,6 +1227,9 @@ textarea {
   }
   .s-pricing-title {
     padding-top: 50px;
+  }
+  .s-pricing-type {
+    padding-top: 0;
   }
   .s-pricing-option2 .s-pricing-option-begin {
     left: 93px;
@@ -1450,13 +1448,16 @@ textarea {
     margin-top: 6px;
   }
 }
+#contact {
+  width: 100%;
+}
+
 .s-contacts {
   display: flex;
-  width: 896px;
+  width: 100%;
   height: auto;
   margin-top: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px;
 }
 
 .s-contacts-info {
@@ -1598,11 +1599,10 @@ textarea {
     flex-direction: column;
     width: 100vw;
     height: 651px;
-    padding-left: calc((100vw - 500px) / 2);
   }
   .s-contacts-form,
   .s-contacts-info {
-    width: 500px;
+    width: 100%;
   }
   .s-contacts-details {
     padding-bottom: 50px;
@@ -1610,7 +1610,6 @@ textarea {
 }
 @media (max-width: 770px) {
   .s-contacts {
-    padding-left: calc((100vw - 400px) / 2);
     height: 690px;
   }
   .s-contacts-details {
@@ -1623,21 +1622,10 @@ textarea {
   .s-contacts-form-row-last {
     padding-left: 180px;
   }
-  .s-contacts-form,
-  .s-contacts-info {
-    width: 400px;
-  }
 }
 @media (max-width: 500px) {
   .s-contacts {
     margin-top: 10px;
-  }
-  gi .s-contacts-form,
-  .s-contacts-info {
-    width: 300px;
-  }
-  .s-contacts {
-    padding-left: calc((100vw - 300px) / 2);
   }
   .s-contacts-title {
     font-size: 40px;
