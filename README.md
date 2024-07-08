@@ -31,7 +31,7 @@ To view the project locally, follow these steps:
 
 ## Demo
 
-Check out the live demo of the project [here](https://best-shop-iav97du05-annas-projects-311fb3cb.vercel.app/).
+Check out the live demo of the project [here](https://best-shop-peach.vercel.app/).
 
 ## Screenshots
 
